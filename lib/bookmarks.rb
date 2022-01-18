@@ -1,10 +1,10 @@
-# class Bookmarks
+class Bookmark
 
-#   # def initialize
-#   #   @bookmarksarray = [] # Array.new
-#   # end
-
-#   # def all
-#   #   @bookmarksarray # returns all bookmarks
-#   # end
-# end
+   def self.all
+    [
+      "http://www.google.com",
+      "http://www.outlook.com",
+      "http://www.facebook.com"
+    ]
+   end
+end

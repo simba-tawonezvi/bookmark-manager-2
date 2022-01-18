@@ -96,3 +96,6 @@ visit "http://localhost:9292"
 mkdir db
 mkdir ./db/migrations
 touch database_connection_setup.rb
+
+<ul> = unordered list (bullet points)
+<ol> = ordered list (numbered)
