@@ -99,3 +99,10 @@ touch database_connection_setup.rb
 
 <ul> = unordered list (bullet points)
 <ol> = ordered list (numbered)
+
+postgres  in terminal - psql postgres
+CREATE DATABASE "jennmorrison";
+
+after created just use - psql
+
+CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
