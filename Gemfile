@@ -1,9 +1,19 @@
 source 'https://rubygems.org'
 
-gem 'rspec'
 gem 'sinatra'
-gem 'capybara' 
 gem 'selenium-webdriver'
-gem 'webrick' 
 gem 'sinatra-contrib'
-gem 'launchy'
+
+gem "rubocop", require: false
+group :test do
+  gem 'capybara' 
+  gem 'falcon'
+  gem 'launchy'
+  gem 'puma'
+  gem 'rspec'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
+  gem 'thin'
+  gem 'webrick' 
+  
+end
