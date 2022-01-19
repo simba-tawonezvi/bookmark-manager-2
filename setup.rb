@@ -20,6 +20,27 @@ gem 'launchy' #save and reload’
 ------In spec_helper.rb
 # at the top of spec/spec_helper.rb
 
+
+**[-- add to spec_helper.rb #necessary
+# require our Sinatra app file
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
+require 'capybara'
+require 'capybara/rspec'
+require 'rspec'
+require './spec/features/web_helpers.rb'  #see below entry web_helpers.rb
+# tell Capybara about our app class
+Capybara.app = BookmarkManager
+-- web_helpers.rb  # create a method with recurring code in web_helpers.rb and execute it inside feature tests
+touch ./spec/features/web_helpers.rb
+example entry:
+def sign_in
+  visit '/'
+  fill_in :player_one_name, with: 'test_player_one'
+  fill_in :player_two_name, with: 'test_player_two'
+  click_button 'Ready!'
+end
+usage in feature test with:  sign_in ]** # Additional info added
+
 # Set the environment to "test"
 ENV['RACK_ENV'] = 'test'
 
@@ -111,4 +132,12 @@ Connect to psql
 Create the database using the psql command CREATE DATABASE bookmark_manager;
 Connect to the database using the pqsl command \c bookmark_manager;
 # Run the query we have saved in the file 
-  01_create_bookmarks_table.sql
+01_create_bookmarks_table.sql
+
+--how to query and manipulate table data.
+
+Using SELECT to view the table
+Using INSERT to add data to a table
+Using SELECT to query data
+Using DELETE to delete data
+Using UPDATE to update data
